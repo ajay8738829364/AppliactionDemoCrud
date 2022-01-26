@@ -1,0 +1,34 @@
+﻿@model  ApplicationDemo.Models.Demo
+
+    <div class="row">
+        <div class="col-6">
+            <form asp-action="Create" method="post">
+                <div class="form-group">
+                    <label asp-for="Name"> </label>
+                    <input asp-for="Name" />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"> </label>
+                    <input asp-for="Email" />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Salary"> </label>
+                    <input asp-for="Salary" />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Dept"> </label>
+                    <input asp-for="Dept" />
+
+                </div>
+                <div class="form-group">
+                   
+                    <input  type="submit" value="Save" class="form-control"/>
+
+                </div>
+
+            </form>
+        </div>
+    </div>

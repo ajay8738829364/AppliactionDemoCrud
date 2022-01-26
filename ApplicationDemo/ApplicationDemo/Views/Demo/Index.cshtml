@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ApplicationDemo.Models.Demo>
+
+<a asp-controller="Demo" asp-action="Create">Create</a>
+<div class="row">
+    <div class="col-12 ">
+        <table class="table table-bordered" >
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>Dept</th>
+            </tr>
+
+            @foreach (var em in Model)
+            {
+        <tr>
+            <td>@em.Id</td>
+            <td>@em.Name</td>
+            <td>@em.Email</td>
+            <td>@em.Salary</td>
+            <td>@em.Dept</td>
+            
+            <td><a asp-controller="Demo" asp-action="Edit" asp-route-id="@em.Id">Edit</a></td>
+            <td><a asp-controller="Demo" asp-action="Delete" asp-route-id="@em.Id">Delete</a></td>
+        </tr>
+                    }
+               
+            </table>
+    </div>
+</div>
